@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --vermelho:#E50914;
+    --preto:#141414;
+    --font-primary: 'Bebas Neue';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elemento base*/
+
+body{
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;   
+    color: whitesmoke;
+}
+
+header .container{
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: var(--font-primary);
+    font-size: 80px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50) 100%), url('/imagens//movies/halo.jpg');
+    height: 400px;
+    background-size: cover;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.filme-principal .descricao{
+    margin: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.filme-principal .titulo{
+    margin: 2%;
+    margin-top: 15%;
+    font-size: 45px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 1.5 px;
+}
+
+.botao a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    margin-left: 10px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+/* Carrosssel */
+
+.box{
+    height: auto;
+    border-radius: 10px;
+    /* background-size: cover; */
+}
+
+.box:hover{
+    /* animation: bounce 0.5s linear; */
+    cursor: pointer;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #6b040a80;
+    animation: zoom 5s;
+}
+@keyframes bounce{
+    20%{
+        transform:  translateY(-6px);
+    }
+    40%{
+        transform:  translateY(0px);
+    }
+    60%{
+        transform:  translateY(-2px);
+    }
+    80%{
+        transform:  translateY(-0px);
+    }
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.carrossel{
+    margin-top: 5px;
+    margin-bottom: 0%;
+}
+
+footer{
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 2%;
+    display: flex;
+    padding-left: 3rem;
+    justify-content: lefft;
+    align-items: center;
+}
+.footer-content{
+    width: 60%;
+    display: flex;
+}
+.footer-content p{
+    color: #a7a7a7;
+    font-size: 1rem;
+}
+
+.footer-content a{
+    color: var(--vermelho);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.footer-content a:hover{
+    color: white;
+}
+
+#link-top{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #232526; 
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--vermelho) ;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem .6rem #000000;
+    z-index: 10;
+}
+
